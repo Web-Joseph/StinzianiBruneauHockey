@@ -1,0 +1,644 @@
+/* -------------------------------
+   Variables Globales - Espacements, Polices et Couleurs
+   ------------------------------- */
+:root {
+    /* Espacements */
+    --title-description-spacing: 10px;         /* Espacement entre le titre et la description */
+    --title-photo-spacing: 50px;               /* Espacement entre le titre et la photo de Mike */
+    --photo-description-spacing: 30px;         /* Espacement entre la photo et la description */
+    --line-spacing: 20px;                      /* Espacement entre les lignes de texte dans la description */
+    --title-top-margin: 30px;                   /* Espacement entre le titre et le haut de la page */
+    
+    --photo-mike-top-left-margin: 400px;        /* Espacement spécifique pour la photo de Mike (haut + gauche) */
+    --photo-emil-bottom-right-margin: 120px;    /* Réduction de 10px pour déplacer la photo d'Emil vers le haut de 10px */ 
+    
+    --photo-spacing-left: 113px;               /* Espacement à gauche des photos */
+    --photo-spacing-right: 113px;              /* Espacement à droite des photos */
+    --photo-margin: 30px;                      /* Espacement entre la photo et la description */
+    --footer-padding: 20px;                    /* Espacement du padding du footer */
+    
+    /* Couleurs */
+    --color-primary: #000000;                  /* Gris foncé pour le texte */
+    --color-secondary: #333;                   /* Gris plus clair pour les sous-titres ou description */
+    --color-accent: #f39c12;                   /* Accentuation avec une couleur d'or (comme pour les titres) */
+    --color-footer-text: white;                /* Couleur du texte du footer */
+    --color-footer-background: rgba(0, 0, 0, 0.8); /* Couleur de fond du footer */
+    
+    /* Polices */
+    --font-family-primary: 'Arial', sans-serif;  /* Police par défaut */
+    --font-family-secondary: 'Roboto', sans-serif; /* Autre police */
+
+    /* Espacement spécifique pour les témoignages */
+    --temoignages-top-margin: -20px;  /* Ajuste la valeur ici pour le positionner plus haut ou plus bas */
+}
+
+/* -------------------------------
+   Appliquer le logo en arrière-plan à l'ensemble de la page
+   ------------------------------- */
+body {
+    background-image: url('../assets/images/LogoTransparent.jpg'); /* Chemin relatif vers le logo */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /* L'image couvre toute la fenêtre */
+    background-attachment: fixed;
+    opacity: 0.7;  /* Ajuster la transparence de l'image de fond */
+    min-height: 100vh; /* Hauteur minimale pour couvrir toute la fenêtre */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* -------------------------------
+   Variables Globales pour la police et la couleur
+   ------------------------------- */
+:root {
+    /* Polices Globales */
+    --font-family-primary: 'Arial', sans-serif;  /* Police par défaut */
+    --font-family-secondary: 'Roboto', sans-serif; /* Autre police que tu peux choisir */
+    
+    /* Couleurs Globales */
+    --color-primary: #000000;  /* Gris foncé pour le texte */
+    --color-secondary: #333; /* Gris plus clair pour les sous-titres ou description */
+    --color-accent: #f39c12; /* Accentuation avec une couleur d'or (comme pour les titres) */
+    --color-footer-text: white; /* Couleur du texte du footer */
+    --color-footer-background: rgba(0, 0, 0, 0.8); /* Couleur de fond du footer */
+    
+    /* Espacements pour la mise en page */
+    --title-description-spacing: 10px;
+    --title-photo-spacing: 50px;
+    --photo-description-spacing: 30px;
+    --line-spacing: 20px;
+}
+
+/* -------------------------------
+   Section Notre Équipe - Ajustement du titre et description
+   ------------------------------- */
+#notre-equipe {
+    margin-top: var(--title-top-margin); /* Espacement du titre par rapport au haut de la page */
+    padding-top: 0; /* Aucun padding supplémentaire pour cette section */
+    text-align: center; /* Centrer le contenu */
+    background-image: url('../assets/images/LogoTransparent.jpg'); /* Répéter le background de la page d'accueil */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /* Fond qui couvre la fenêtre */
+    background-attachment: fixed;
+}
+
+/* Style du titre h2 dans la section Notre Équipe */
+#notre-equipe h2 {
+    margin-top: var(--title-top-margin); /* Espacement du titre du haut de la page */
+    margin-bottom: var(--title-description-spacing); /* Espacement entre le titre et la description */
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 2.5em;
+}
+
+/* Style pour la description sous le titre */
+#notre-equipe p {
+    margin-top: var(--title-description-spacing); /* Espacement entre le titre et la description */
+    font-size: 1.2em; /* Taille de la police de la description */
+    text-align: center; /* Centrer la description */
+}
+
+
+/* -------------------------------
+   Positionnement des coachs avec leurs photos et descriptions
+   ------------------------------- */
+.coach {
+    display: flex; /* Utilisation de flexbox pour aligner la photo et la description */
+    align-items: flex-start; /* Alignement vertical des éléments */
+    margin-bottom: 40px; /* Espacement entre les sections des coachs */
+    gap: var(--photo-description-spacing); /* Espacement entre la photo et la description */
+    padding-left: var(--photo-spacing-left); /* Espacement à gauche de la photo */
+    padding-right: var(--photo-spacing-right); /* Espacement à droite de la photo */
+    justify-content: flex-start; /* Alignement à gauche */
+}
+
+/* Positionner les descriptions à gauche de la photo */
+.coach-info {
+    max-width: 700px; /* Largeur maximale pour la description */
+    text-align: left; /* Alignement du texte à gauche */
+    margin-top: 90px; /* Espace au-dessus de la description */
+    margin-bottom: 20px; /* Espace en dessous de la description */
+    line-height: var(--line-spacing); /* Espacement entre les lignes de texte */
+}
+
+/* Assurer que chaque élément dans la description est aligné à gauche */
+.coach-info h3, 
+.coach-info p {
+    text-align: left !important; /* Forcer l'alignement à gauche */
+}
+
+/* Taille des images des coachs */
+.coach img {
+    width: 400px; /* Taille fixe pour les photos */
+    height: auto; /* Conserver le ratio de l'image */
+    border-radius: 8px; /* Bord arrondi pour l'image */
+    margin-right: var(--photo-margin); /* Espacement entre la photo et la description */
+}
+
+/* -------------------------------
+   Positionner Mike Stinziani à gauche
+   ------------------------------- */
+#notre-equipe .coach:first-child {
+    flex-direction: row; /* La première photo de coach (Mike) est à gauche, description à droite */
+    margin-top: var(--photo-mike-top-left-margin); /* Utilisation de la variable spécifique pour positionner la photo de Mike */
+}
+
+/* Ajuster la position de la photo de Mike */
+#notre-equipe .coach:first-child img {
+    top: var(--photo-mike-top-left-margin); /* Positionner la photo de Mike en haut + à gauche */
+    left: var(--photo-spacing-left); /* Positionner la photo de Mike à gauche */
+}
+
+/* -------------------------------
+   Positionner Emil Bruneau à droite
+   ------------------------------- */
+#notre-equipe .coach:last-child {
+    flex-direction: row-reverse; /* La deuxième photo de coach (Emil) est à droite, description à gauche */
+    margin-top: var(--photo-emil-bottom-right-margin); /* Utilisation de la variable spécifique pour positionner la photo d'Emil */
+}
+
+/* Ajuster la position de la photo d'Emil */
+#notre-equipe .coach:last-child img {
+    top: var(--photo-emil-bottom-right-margin); /* Positionner la photo d'Emil en bas + à droite */
+    right: var(--photo-spacing-right); /* Positionner la photo d'Emil à droite */
+}
+
+/* Espacement entre la description et la photo d'Emil */
+#notre-equipe .coach:last-child .coach-info {
+    margin-top: 130px; /* Espacement entre la description de Mike et Emil */
+}
+
+@media (max-width: 768px) {
+    .coach {
+        flex-direction: column; /* Afficher les coachs en colonne sur mobile */
+        align-items: center; /* Centrer les éléments sur mobile */
+    }
+
+    .coach img {
+        width: 100%; /* Adapter la taille des images à l'écran */
+        margin-bottom: 20px; /* Espacement entre la photo et la description */
+    }
+
+    .coach-info {
+        text-align: center; /* Centrer le texte de la description */
+    }
+}
+
+
+/* -------------------------------
+   Section d'accueil
+   ------------------------------- */
+#accueil {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    flex-direction: column;
+    font-family: var(--font-family-primary); /* Appliquer la police primaire */
+    color: var(--color-primary); /* Appliquer la couleur primaire */
+}
+
+/* Ajuster la marge du titre pour le monter */
+#accueil h1 {
+    font-size: 3.5em;
+    margin-top: -400px;
+    margin-bottom: 0;
+    color: var(--color-highlight); /* Utiliser la couleur d'accentuation pour le titre */
+}
+
+#accueil p {
+    font-size: 2.2em;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: var(--color-secondary); /* Appliquer la couleur secondaire pour le texte */
+}
+
+@media (max-width: 768px) {
+    #accueil h1 {
+        font-size: 2.5em; /* Réduire la taille du titre sur mobile */
+        margin-top: -200px; /* Ajuster l'espacement sur mobile */
+    }
+
+    #accueil p {
+        font-size: 1.5em; /* Réduire la taille du texte */
+    }
+}
+
+
+/* -------------------------------
+   Section Nos Services
+   ------------------------------- */
+#services {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligner le contenu vers le haut de la page */
+    align-items: center; /* Garder le centrage horizontal */
+    text-align: center;
+    padding: 0px;
+    background-image: url('../assets/images/LogoTransparent.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 1;
+    color: var(--color-primary); /* Appliquer la couleur primaire pour le texte */
+    margin-top: 0; /* Retirer tout espacement avant la section */
+    height: auto; /* Ajuster la hauteur en fonction du contenu */
+}
+
+/* Titres principaux */
+#services h1 {
+    font-size: 3em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: var(--color-highlight); /* Titre avec couleur d'accentuation */
+}
+
+/* Titres des sections (services) */
+#services h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--color-primary); /* Utiliser la couleur primaire */
+}
+
+/* Listes des services */
+#services ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 0.8em;
+    text-align: left;
+    margin: 0 auto 0px auto;
+    width: 90%;
+    color: var(--color-secondary); /* Appliquer la couleur secondaire aux listes */
+}
+
+/* Texte général des services */
+#services p {
+    font-size: 1.1em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: var(--color-secondary); /* Appliquer la couleur secondaire au texte */
+}
+
+@media (max-width: 768px) {
+    #services h1 {
+        font-size: 2em; /* Réduire la taille du titre sur mobile */
+    }
+
+    #services h2 {
+        font-size: 1.2em; /* Réduire la taille des sous-titres */
+    }
+
+    #services p {
+        font-size: 1em; /* Ajuster la taille du texte des descriptions */
+    }
+}
+
+
+/* -------------------------------
+   Section Témoignages
+   ------------------------------- */
+#temoignages {
+    display: flex; /* Utilisation de Flexbox pour centrer les éléments */
+    flex-direction: column; /* Organiser les témoignages en colonne */
+    justify-content: flex-start; /* Aligner les témoignages au sommet (par rapport à la page) */
+    align-items: center; /* Centrer horizontalement */
+    padding: 40px 20px;
+    margin-top: var(--temoignages-top-margin); /* Utiliser la variable pour l'espacement du haut */
+    min-height: 100vh; /* Hauteur minimale pour occuper tout l'espace de la page */
+    text-align: center;
+}
+
+#temoignages h1 {
+    font-size: 2.5em;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: var(--color-primary); /* Couleur primaire pour le titre */
+}
+
+/* Style des témoignages */
+.temoignage {
+    width: 100%; /* Prendre toute la largeur disponible */
+    max-width: 800px; /* Largeur maximale pour ne pas s'étirer */
+    margin: 20px 0;
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #ddd; /* Une petite bordure pour délimiter chaque témoignage */
+    border-radius: 8px; /* Bordure arrondie pour les témoignages */
+    background-color: rgba(255, 255, 255, 0.8); /* Fond légèrement transparent pour le témoignage */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour donner de la profondeur */
+}
+
+.temoignage .avis {
+    font-style: italic;
+    font-size: 1.1em;
+    color: var(--color-secondary); /* Couleur secondaire pour le texte */
+}
+
+.temoignage .nom {
+    font-weight: bold;
+    margin-top: 15px;
+    color: var(--color-primary); /* Nom en couleur primaire */
+}
+
+/* -------------------------------
+   Formulaire de Témoignage
+   ------------------------------- */
+.formulaire-temoignage {
+    background-color: #f9f9f9;  /* Couleur de fond claire */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.formulaire-temoignage h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.formulaire-temoignage label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.formulaire-temoignage input[type="text"],
+.formulaire-temoignage textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.formulaire-temoignage textarea {
+    resize: vertical;
+}
+
+.formulaire-temoignage button {
+    padding: 10px 20px;
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;  /* Ajouter de l'espace sous le bouton */
+}
+
+.formulaire-temoignage button:hover {
+    background-color: #e67e22;
+}
+
+@media (max-width: 768px) {
+    #temoignages {
+        padding: 20px; /* Réduire le padding sur mobile */
+    }
+
+    .temoignage {
+        margin: 10px 0; /* Réduire l'espace entre les témoignages */
+        width: 100%; /* Prendre toute la largeur disponible */
+    }
+
+    .temoignage .avis {
+        font-size: 1em; /* Ajuster la taille de la citation */
+    }
+
+    .temoignage .nom {
+        font-size: 1.2em; /* Réduire la taille du nom */
+    }
+}
+
+/* -------------------------------
+   Section Inscription - Styles généraux
+   ------------------------------- */
+#inscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centrer verticalement */
+    align-items: center;      /* Centrer horizontalement */
+    padding: 40px 20px;
+    min-height: 100vh;        /* Hauteur minimale pour couvrir toute la fenêtre */
+    background-image: url('../assets/images/LogoTransparent.jpg'); /* Réutiliser l'image de fond */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;   /* Fond qui couvre la fenêtre */
+    background-attachment: fixed;
+    opacity: 0.8;             /* Rendre le fond légèrement transparent */
+    color: var(--color-primary); /* Utiliser la couleur primaire pour le texte */
+    text-align: center;       /* Centrer le texte */
+}
+
+/* Titre de la section */
+#inscription h1 {
+    font-size: 2.5em;
+    margin-top: -200px; /* Ajuste l'espacement du titre à 10px du header */
+    margin-bottom: var(--title-description-spacing); /* Espacement entre le titre et le formulaire */
+    color: var(--color-primary); /* Couleur or définie dans les variables */
+    font-family: var(--font-family-secondary); /* Police secondaire pour le titre */
+}
+
+/* -------------------------------
+   Conteneur du formulaire d'inscription
+   ------------------------------- */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fond légèrement transparent */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    width: 100%;
+    max-width: 600px; /* Limiter la largeur à 600px */
+    margin-top: 20px;  /* Espacement entre le titre et la boîte d'inscription */
+}
+
+/* Labels des champs du formulaire */
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    color: var(--color-primary); /* Couleur primaire pour les labels */
+    font-family: var(--font-family-primary); /* Police par défaut pour les labels */
+}
+
+/* Champs du formulaire (input) */
+form input,
+form button,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ddd; /* Bordure claire */
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: var(--font-family-primary); /* Utiliser la police par défaut */
+}
+
+/* Bouton de soumission */
+form button {
+    background-color: var(--color-accent); /* Couleur d'accentuation pour le bouton */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+/* Effet au survol du bouton */
+form button:hover {
+    background-color: #e67e22; /* Change de couleur lors du survol */
+}
+
+/* -------------------------------
+   Formulaire Responsive Design
+   ------------------------------- */
+@media (max-width: 768px) {
+    #inscription {
+        padding: 20px; /* Moins de padding sur mobile */
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+}
+
+
+
+/* -------------------------------
+   Footer
+   ------------------------------- */
+footer {
+    text-align: center;
+    padding: var(--footer-padding);
+    background-color: var(--color-footer-background); /* Couleur de fond */
+    color: var(--color-footer-text); /* Couleur du texte */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: var(--font-family-primary); /* Appliquer la même police primaire que sur la page d'accueil */
+}
+
+/* Appliquer la même police aux éléments texte du footer (p et a) */
+footer p, footer a {
+    font-family: var(--font-family-primary);  /* Appliquer la police à tous les éléments texte du footer */
+}
+
+/* ---------------------- MENU DÉROULANT ------------------------ */
+
+/* Style du menu déroulant */
+nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Disposition en ligne pour les éléments du menu */
+    justify-content: center; /* Centrer les éléments du menu horizontalement */
+}
+
+nav ul li {
+    position: relative; /* Pour positionner les sous-menus */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    background-color: transparent;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Changement de couleur lors du survol */
+nav ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Style du menu déroulant */
+nav ul li ul {
+    display: none; /* Masquer les sous-menus */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 4px;
+    min-width: 180px;
+}
+
+nav ul li:hover > ul {
+    display: block; /* Afficher le sous-menu lors du survol du parent */
+}
+
+nav ul li ul li a {
+    padding: 10px;
+    background-color: transparent;
+}
+
+nav ul li ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Icône du menu hamburger (pour mobile) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 6px auto;
+    background-color: #333;
+}
+
+/* Responsivité pour mobile (moins de 768px) */
+@media (max-width: 768px) {
+    /* Masquer les éléments du menu par défaut */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    /* Afficher l'icône hamburger sur mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Lorsque le menu est actif, on l'affiche */
+    nav.active ul {
+        display: flex;
+    }
+
+    /* Modifier la présentation des éléments du menu */
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Submenu style pour mobile */
+    nav ul li ul {
+        position: static; /* Modifier la position du sous-menu pour mobile */
+        min-width: 100%;
+    }
+}

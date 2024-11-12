@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - École de Hockey Stinziani Bruneau</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Lien vers ton fichier CSS -->
+</head>
+<body>
+
+    <!-- Menu de navigation -->
+    <header>
+        <nav class="menu">
+            <ul>
+                <li><a href="Home.html">Accueil</a></li>
+                <li><a href="notre-equipe.html">Notre Équipe</a></li>
+                <li><a href="services.html">Nos Services</a></li>
+                <li><a href="inscriptions.html">Inscription</a></li> <!-- Lien vers la page inscription -->
+                <li><a href="temoignagnes.html">Témoignages</a></li> <!-- Lien vers la page témoignages -->
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section Inscription -->
+    <section id="inscription" class="section">
+        <h1>Inscription en ligne</h1>
+        
+        <div class="form-container">
+            <!-- Formulaire HTML pour l'inscription -->
+            <form id="form-inscription" action="send_email.php" method="POST">
+                
+                <label for="prenom">Prénom du joueur :</label>
+                <input type="text" id="prenom" name="prenom" required placeholder="Prénom du joueur">
+                
+                <label for="nom">Nom du joueur :</label>
+                <input type="text" id="nom" name="nom" required placeholder="Nom du joueur">
+                
+                <label for="annee-naissance">Année de naissance :</label>
+                <input type="number" id="annee-naissance" name="annee-naissance" required placeholder="Année de naissance">
+                
+                <label for="niveau">Niveau joué 2024-2025 :</label>
+                <input type="text" id="niveau" name="niveau" required placeholder="Niveau joué">
+                
+                <label for="parent">Nom du parent responsable :</label>
+                <input type="text" id="parent" name="parent" required placeholder="Nom du parent responsable">
+                
+                <label for="telephone">Numéro de téléphone d'urgence :</label>
+                <input type="tel" id="telephone" name="telephone" required placeholder="Numéro de téléphone d'urgence">
+                
+                <label for="email">Adresse courriel :</label>
+                <input type="email" id="email" name="email" required placeholder="Adresse courriel">
+                
+                <label for="chandail">Grandeur de chandail de hockey :</label>
+                <input type="text" id="chandail" name="chandail" required placeholder="Grandeur de chandail">
+                
+                <label for="tshirt">Grandeur de t-shirt :</label>
+                <input type="text" id="tshirt" name="tshirt" required placeholder="Grandeur de t-shirt">
+                
+                <!-- Bouton de soumission -->
+                <button type="submit">Soumettre mon inscription</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Stinziani Bruneau Hockey.</p>
+    </footer>
+
+    <script src="js/scripts.js"></script> <!-- Lien vers ton script JS -->
+
+</body>
+</html>
